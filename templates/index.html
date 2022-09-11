@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" >
+    <title>Ninjas </title>
+</head>
+<body >
+    <h1>Dojo Survey</h1>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-4">
+        
+            <form action='/process' method='POST' >
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name">                
+                </div>
+                <label for="select1" class="form-label">Dojo location: </label>
+                <select name="label1" class="form-select" id="select1" >
+                    <option selected>--Select a location</option>
+                    <option >EEUU</option>
+                    <option >India</option>
+                    <option >Suiza</option>
+                    <option >Chile</option>
+                  </select>
+
+                <label for="select2" class="form-label">Favorite Language </label>
+                <select name="label2"class="form-select" id="select2" >
+                    <option  selected>--Select a Language</option>
+                    <option >Python</option>
+                    <option >JavaScript</option>
+                    <option >C++</option>
+                    <option >Java</option>
+                  </select>
+                  <br>
+
+                  <div class="form-floating">
+                    <textarea name="coment" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                  </div>
+                
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
